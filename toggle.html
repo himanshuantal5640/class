@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="bg-blue-200 p-4">
+      <div class="flex justify-around items-center">
+        <p class="hover:underline">HOME</p>
+        <p class="hover:underline">CONTACTS</p>
+        <p class="hover:underline">ABOUT US</p>
+        <p class="hover:underline cursor-pointer" id="form-toggle">FORM</p>
+      </div>
+    </nav>
+
+    <main class="w-[95%] mx-auto mt-10">
+      <div
+        class="bg-green-300 w-full h-[300px] pt-10 toggle-div"
+        id="toggle-div"
+      >
+        <div
+          class="w-[60%] mx-auto bg-amber-900 h-[200px] shadow-lg flex justify-around items-center flex-col"
+        >
+          <p class="border-2 border-white">
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="px-16 py-2 text-white text-center"
+            />
+          </p>
+
+          <p
+            class="p-2 border-2 border-white w-[20%] text-white text-center cursor-pointer"
+          >
+            SUBMIT
+          </p>
+        </div>
+      </div>
+
+      <div class="flex justify-around items-center mt-10 h-[400px] bg-pink-200">
+        <div
+          class="w-full bg-[url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkozcZv82889xQDeuTI9ZPvi6qTk_PJC8szw&s)] h-full bg-center bg-no-repeat"
+        ></div>
+
+        <div class="w-full">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea fugit
+          repudiandae quas commodi facilis aspernatur? Aliquam voluptates saepe
+          consequuntur, rem, nam maiores id inventore placeat fugit animi cum
+          dolores, sunt quo officiis facilis quibusdam sequi delectus molestias.
+          Accusamus fugiat veritatis excepturi eius cum minima iste id adipisci
+          labore reiciendis aspernatur repellendus odio, delectus libero culpa!
+          Quibusdam asperiores exercitationem ipsam temporibus? Quas eligendi
+          quos, eveniet facere reprehenderit incidunt, excepturi atque facilis
+          voluptas unde iure! Deleniti distinctio facere voluptatum odio eius
+          totam voluptatem! Impedit laboriosam, in repellat quisquam maxime
+          tempora dolorem corporis rerum quia maiores et quo sint quod facere
+          possimus soluta.
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="bg-yellow-200 w-full h-[50px] flex justify-around items-center"
+    >
+      <p>Lorem, ipsum dolor.</p>
+      <p>Lorem, ipsum dolor.</p>
+      <p>Lorem, ipsum dolor.</p>
+      <p>Lorem, ipsum dolor.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("form-toggle")
+        .addEventListener("click", function () {
+          const toggleDiv = document.getElementById("toggle-div");
+          if (toggleDiv.style.display === "none") {
+            toggleDiv.style.display = "block";
+          } else {
+            toggleDiv.style.display = "none";
+          }
+        });
+    </script>
+  </body>
+</html>
